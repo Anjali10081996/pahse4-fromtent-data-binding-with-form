@@ -1,0 +1,47 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6" [style.background-color]="color.YELLOW" [style.padding.px]="age">
+            <h3 [style.color]="'brown'">Style Binding</h3>
+            <div class="alert alert-primary" role="alert">
+                Username : {{username}} -<strong>{{email}}</strong>
+               </div>
+               <div [style.font-size.px]="age" class="alert alert-secondary" role="alert">
+                 User age:{{age}}
+               </div>
+               <div class="alert alert-success" role="alert">
+                user ismarried: {{isMarried}}
+               </div>
+               <div class="alert alert-danger" role="alert">
+                user message : {{message}}
+               </div>
+               <div class="alert alert-warning" role="alert">
+                 Product details: {{product.id}} - {{product.name}} - {{product.price}} - {{product.isActive}} - {{product.description}}
+               </div>
+             </div>
+              
+        <div class="col-sm-6" [class]="'bg-one'">
+          <h3 [className]="'bg-two'">Class binding</h3>
+          <div class="alert alert-primary" role="alert">
+              Username :<span [innerText]="username"></span> -<strong [innerText] ="email"></strong>
+           </div>
+           <div class="alert" [class]="age>25? ' alert-secondary':'alert-\info'" role="alert">
+              User age:<span [innerText]="age"></span>
+           </div>
+           <div class="alert alert-success" role="alert">
+              user ismarried: <span [innerText]="isMarried"></span>
+          </div>
+           <div class="alert alert-danger" role="alert">
+              user message : <span [innerText]="message"></span>
+          </div>
+             <div class="alert alert-warning" role="alert" [class]="product.isActive? 'bg-three':'bg-two'">
+               Product details: 
+               <span [innerText]="product.id"></span>
+               <span [innerText]="product.name"></span>--
+               <span [innerText]="product.price"></span>-
+               <span [innerText]="product.isActive"></span>-
+               <span [innerText]="product.description"></span>
+               
+             </div>
+        </div>
+    </div>
+
